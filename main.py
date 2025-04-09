@@ -2,16 +2,16 @@ import json
 
 
 def print_sites():
-    f = open('minerals/world.json', 'r')
-    data = json.load(f)
-    f.close()
+    minerals_file = open('world.json', 'r')
+    data = json.load(minerals_file)
+    minerals_file.close()
 
     for site in data:
         if site["country"] == "United Kingdom":
             print(site["site_name"], ": " + site["commod1"] + ", " + site["commod2"])
 
 def print_minerals():
-    with open('minerals/minerals.json', 'r') as f:
+    with open('minerals.json', 'r') as f:
         data = json.load(f)
 
     for m in data:
