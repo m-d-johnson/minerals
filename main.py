@@ -2,9 +2,9 @@ import json
 
 
 def print_sites():
-    minerals_file = open('world.json', 'r')
-    data = json.load(minerals_file)
-    minerals_file.close()
+    sites_file = open('world.json', 'r')
+    data = json.load(sites_file)
+    sites_file.close()
 
     for site in data:
         if site["country"] == "United Kingdom":
